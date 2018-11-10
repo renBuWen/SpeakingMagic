@@ -23,11 +23,11 @@ GameObject:
   - component: {fileID: 33095831702826824}
   - component: {fileID: 23961971562861062}
   m_Layer: 0
-  m_Name: Pine-02
+  m_Name: Pine-06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 64
+  m_StaticEditorFlags: 65
   m_IsActive: 1
 --- !u!4 &4752648299885590
 Transform:
