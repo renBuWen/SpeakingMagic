@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 480734}
   - component: {fileID: 3347006}
   - component: {fileID: 2301326}
+  - component: {fileID: 136819611659572762}
   m_Layer: 0
   m_Name: SM_Bld_Castle_Tower_01
   m_TagString: Untagged
@@ -23,13 +24,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147310}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0.70710665, z: 0, w: 0.70710695}
+  m_LocalPosition: {x: -12.680001, y: 0, z: 15.76}
+  m_LocalScale: {x: 1, y: 1.405, z: -1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 136.684, z: 0}
 --- !u!23 &2301326
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -83,3 +84,16 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 147310}
   m_IsPrefabAsset: 1
+--- !u!136 &136819611659572762
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147310}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.3893434
+  m_Height: 4.74
+  m_Direction: 1
+  m_Center: {x: -0.0000038146973, y: 1.5181544, z: -0.000030517578}

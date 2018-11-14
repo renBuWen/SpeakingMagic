@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class Monster_AI : MonoBehaviour {
     public float perceptionDistance = 10.0f;
-    public float attackDistance = 2.0f;
-    public float speed = 1.0f;
     private bool changeable = true;
     private Vector3 direction;
     private GameObject player;
     private Rigidbody body;
+    private Monster monster;
     private Animation animation;
+
     // Use this for initialization
 	void Start () {
         body = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player");
+        monster = GetComponent<Monster>();
         animation = GetComponent<Animation>();
     }
 
@@ -25,7 +26,7 @@ public class Monster_AI : MonoBehaviour {
 
     bool nearByPlayer(Vector3 relativePos)
     {
-        return relativePos.sqrMagnitude < attackDistance * attackDistance;
+        return relativePos.sqrMagnitude < monster.attackDistance * monster.attackDistance;
     }
 
     // Update is called once per frame
@@ -49,8 +50,10 @@ public class Monster_AI : MonoBehaviour {
             animation.Play("mummy_bite");
         }
         else
-        {
+        { 
+            if(!animation.isPlaying)
             animation.Play("mummy_walk");
+
             if (PerceptPlayer(relativePos))
             {
                 direction = relativePos.normalized;
@@ -65,7 +68,7 @@ public class Monster_AI : MonoBehaviour {
                 }
             }
 
-            body.velocity = new Vector3(direction.x * speed, body.velocity.y, direction.z * speed);
+            body.velocity = new Vector3(direction.x * monster.speed, body.velocity.y, direction.z * monster.speed);
         }
 
     }

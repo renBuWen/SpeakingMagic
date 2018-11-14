@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 193756565973322490}
   - component: {fileID: 33095831702826824}
   - component: {fileID: 23961971562861062}
+  - component: {fileID: 136245025629763778}
   m_Layer: 0
   m_Name: Birch-01
   m_TagString: Untagged
@@ -1972,6 +1973,19 @@ MonoBehaviour:
   optimizedSolidMaterial: {fileID: 21679179689427852}
   optimizedCutoutMaterial: {fileID: 21976704653444986}
   isInPreviewMode: 0
+--- !u!136 &136245025629763778
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1077254595555358}
+  m_Material: {fileID: 13400000, guid: 06418ac10611ecf4289e9714083b869f, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.56
+  m_Height: 15.6
+  m_Direction: 1
+  m_Center: {x: -0.13, y: 7.5, z: -0.1163311}
 --- !u!193 &193756565973322490
 Tree:
   m_ObjectHideFlags: 1

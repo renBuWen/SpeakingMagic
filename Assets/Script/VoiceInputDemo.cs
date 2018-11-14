@@ -6,7 +6,7 @@ using System.Linq;
 
 public class VoiceInputDemo : MonoBehaviour
 {
-    Player player;
+    PlayerController player;
     public DialogManager dialogManager;
     public BoardManager boardManager;
 
@@ -18,7 +18,7 @@ public class VoiceInputDemo : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        player= GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player= GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 
         Debug.Log("VoiceInputStart");
         // 向字典中添加关键词，key为关键词， vallue为一个匿名action
