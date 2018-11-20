@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BoardManager
   - DialogManager
+  - Biology
   layers:
   - Default
   - TransparentFX

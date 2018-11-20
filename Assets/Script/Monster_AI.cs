@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Monster_AI : MonoBehaviour {
     public float perceptionDistance = 10.0f;
@@ -9,14 +7,14 @@ public class Monster_AI : MonoBehaviour {
     private GameObject player;
     private Rigidbody body;
     private Monster monster;
-    private Animation animation;
+    private Animation animate;
 
     // Use this for initialization
 	void Start () {
         body = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player");
         monster = GetComponent<Monster>();
-        animation = GetComponent<Animation>();
+        animate = GetComponent<Animation>();
     }
 
     bool PerceptPlayer(Vector3 relativePos)
@@ -47,12 +45,12 @@ public class Monster_AI : MonoBehaviour {
 
         if (nearByPlayer(relativePos))
         {
-            animation.Play("mummy_bite");
+            animate.Play("mummy_bite");
         }
         else
         { 
-            if(!animation.isPlaying)
-            animation.Play("mummy_walk");
+            if(!animate.isPlaying)
+            animate.Play("mummy_walk");
 
             if (PerceptPlayer(relativePos))
             {

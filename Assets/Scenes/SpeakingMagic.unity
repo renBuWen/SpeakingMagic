@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6692,15 +6692,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 403480, guid: f101780f32b5af64bb3c14fbf09b1771, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 36.89
+      value: 10.96
       objectReference: {fileID: 0}
     - target: {fileID: 403480, guid: f101780f32b5af64bb3c14fbf09b1771, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.2
+      value: 3.94
       objectReference: {fileID: 0}
     - target: {fileID: 403480, guid: f101780f32b5af64bb3c14fbf09b1771, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 52.349995
+      value: 74.99
       objectReference: {fileID: 0}
     - target: {fileID: 403480, guid: f101780f32b5af64bb3c14fbf09b1771, type: 2}
       propertyPath: m_LocalRotation.x
@@ -11899,15 +11899,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 493852, guid: 52d2ac88e4266ae4287982747ca76a1c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 40.93001
+      value: 10.76
       objectReference: {fileID: 0}
     - target: {fileID: 493852, guid: 52d2ac88e4266ae4287982747ca76a1c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.3500004
+      value: 2.66
       objectReference: {fileID: 0}
     - target: {fileID: 493852, guid: 52d2ac88e4266ae4287982747ca76a1c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 51.77
+      value: 71.6
       objectReference: {fileID: 0}
     - target: {fileID: 493852, guid: 52d2ac88e4266ae4287982747ca76a1c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -11997,15 +11997,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 422898, guid: 99b22ade5e5fef24b82c5cba6e333937, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 42.913994
+      value: 12.76
       objectReference: {fileID: 0}
     - target: {fileID: 422898, guid: 99b22ade5e5fef24b82c5cba6e333937, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.0559998
+      value: 2.66
       objectReference: {fileID: 0}
     - target: {fileID: 422898, guid: 99b22ade5e5fef24b82c5cba6e333937, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 55.212006
+      value: 75.6
       objectReference: {fileID: 0}
     - target: {fileID: 422898, guid: 99b22ade5e5fef24b82c5cba6e333937, type: 2}
       propertyPath: m_LocalRotation.x
@@ -12832,6 +12832,10 @@ Prefab:
     - target: {fileID: 1169823311122660, guid: 1cfcd7d8c0919d640aa15e9793525ab3, type: 2}
       propertyPath: m_Name
       value: mummy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1169823311122660, guid: 1cfcd7d8c0919d640aa15e9793525ab3, type: 2}
+      propertyPath: m_TagString
+      value: Biology
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cfcd7d8c0919d640aa15e9793525ab3, type: 2}
@@ -21961,6 +21965,7 @@ GameObject:
   - component: {fileID: 679015167}
   - component: {fileID: 679015169}
   - component: {fileID: 679015168}
+  - component: {fileID: 679015170}
   m_Layer: 0
   m_Name: FireballParticle
   m_TagString: Untagged
@@ -21977,7 +21982,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0.048772357, z: -0, w: 0.99880993}
   m_LocalPosition: {x: 6.8, y: -2.3211823, z: 12.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1983089725}
+  - {fileID: 838885675}
   m_Father: {fileID: 1402276610}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -111.990005, z: 0}
@@ -22107,7 +22114,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -25442,11 +25449,11 @@ ParticleSystem:
     serializedVersion: 3
     type: 0
     collisionMode: 0
-    colliderForce: 0
+    colliderForce: 100
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    plane0: {fileID: 0}
+    plane0: {fileID: 1983089725}
     plane1: {fileID: 0}
     plane2: {fileID: 0}
     plane3: {fileID: 0}
@@ -25612,7 +25619,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 10000
+    maxKillSpeed: 100
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
@@ -25620,12 +25627,12 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
-    enabled: 0
-    collisionShape0: {fileID: 0}
+    enabled: 1
+    collisionShape0: {fileID: 838885675}
     collisionShape1: {fileID: 0}
     collisionShape2: {fileID: 0}
     collisionShape3: {fileID: 0}
@@ -25633,7 +25640,7 @@ ParticleSystem:
     collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
-    enter: 0
+    enter: 2
     exit: 0
     radiusScale: 1
   SubModule:
@@ -26571,6 +26578,17 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &679015170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 679015166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5b36db8d87c8d4fb28e592096b47a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &679536630
 Prefab:
   m_ObjectHideFlags: 0
@@ -30458,15 +30476,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 422898, guid: 99b22ade5e5fef24b82c5cba6e333937, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 42.91401
+      value: 12.76
       objectReference: {fileID: 0}
     - target: {fileID: 422898, guid: 99b22ade5e5fef24b82c5cba6e333937, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.0559998
+      value: 2.66
       objectReference: {fileID: 0}
     - target: {fileID: 422898, guid: 99b22ade5e5fef24b82c5cba6e333937, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 52.522007
+      value: 72.6
       objectReference: {fileID: 0}
     - target: {fileID: 422898, guid: 99b22ade5e5fef24b82c5cba6e333937, type: 2}
       propertyPath: m_LocalRotation.x
@@ -31269,6 +31287,47 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 440136, guid: 1018a369bf1e2304693a74ea94205090,
     type: 2}
   m_PrefabInternal: {fileID: 836972951}
+--- !u!1 &838885674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 838885675}
+  - component: {fileID: 838885676}
+  m_Layer: 0
+  m_Name: Collider 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &838885675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 838885674}
+  m_LocalRotation: {x: -0, y: -0.6825426, z: -0, w: 0.73084587}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 5.578978, y: 5.578977, z: 5.578978}
+  m_Children: []
+  m_Father: {fileID: 679015167}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &838885676
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 838885674}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &839926748
 Prefab:
   m_ObjectHideFlags: 0
@@ -64284,6 +64343,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1169823311122660, guid: 1cfcd7d8c0919d640aa15e9793525ab3, type: 2}
+      propertyPath: m_TagString
+      value: Biology
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cfcd7d8c0919d640aa15e9793525ab3, type: 2}
   m_IsPrefabAsset: 0
@@ -68977,6 +69040,10 @@ Prefab:
       propertyPath: m_Name
       value: mummy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1169823311122660, guid: 1cfcd7d8c0919d640aa15e9793525ab3, type: 2}
+      propertyPath: m_TagString
+      value: Biology
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cfcd7d8c0919d640aa15e9793525ab3, type: 2}
   m_IsPrefabAsset: 0
@@ -69450,6 +69517,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 411084, guid: 138f01e248f319c4388a7199ae4e3eae,
     type: 2}
   m_PrefabInternal: {fileID: 1982028185}
+--- !u!1 &1983089724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1983089725}
+  m_Layer: 0
+  m_Name: Plane Transform 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1983089725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1983089724}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 5.578978, y: 5.578977, z: 5.578978}
+  m_Children: []
+  m_Father: {fileID: 679015167}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1983808868
 GameObject:
   m_ObjectHideFlags: 0
@@ -70092,6 +70187,10 @@ Prefab:
     - target: {fileID: 1169823311122660, guid: 1cfcd7d8c0919d640aa15e9793525ab3, type: 2}
       propertyPath: m_Name
       value: mummy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1169823311122660, guid: 1cfcd7d8c0919d640aa15e9793525ab3, type: 2}
+      propertyPath: m_TagString
+      value: Biology
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cfcd7d8c0919d640aa15e9793525ab3, type: 2}
