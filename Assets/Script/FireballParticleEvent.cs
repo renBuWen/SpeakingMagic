@@ -8,13 +8,14 @@ public class FireballParticleEvent : MonoBehaviour {
 	void Start () {
 		
 	}
-    private void OnParticleTrigger(GameObject go)
+    private void OnParticleCollision(GameObject other)
     {
-        if(go.tag == "Biology")
+        if (other.tag == "Biology")
         {
-            go.GetComponent<Monster>().ReceiveDamaged(5);
+            other.GetComponent<Monster>().ReceiveDamaged(5);
         }
     }
+
     // Update is called once per frame
     void Update () {
 		
