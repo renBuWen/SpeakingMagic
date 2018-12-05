@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirstPersonView : MonoBehaviour {
+public class FirstPersonCamera : MonoBehaviour {
     //方向灵敏度
     public float sensitivityX = 10F;
     public float sensitivityY = 10F;
@@ -29,8 +29,5 @@ public class FirstPersonView : MonoBehaviour {
 
     void Start()
     {
-        //// Make the rigid body not change rotation
-        //if (GetComponent<Rigidbody>())
-        //    GetComponent<Rigidbody>().freezeRotation = true;
     }
 }

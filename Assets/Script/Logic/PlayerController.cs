@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     public ParticleSystem fireBallParticle;
     public ParticleSystem lightParticle;
-    public FirstPersonView view;
+    public FirstPersonCamera view;
 
     [HideInInspector]
     public GameObject entityCatched = null;

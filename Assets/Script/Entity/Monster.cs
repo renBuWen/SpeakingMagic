@@ -28,7 +28,6 @@ public class Monster : MonoBehaviour {
         animation.PlayQueued("mummy_die");
         GetComponent<Monster_AI>().enabled = false;
         this.enabled = false;
-       
     }
 
     // Update is called once per frame
