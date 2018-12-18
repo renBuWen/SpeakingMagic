@@ -6,9 +6,21 @@ public class DialogManager : MonoBehaviour {
     public NPC npc1;
     public DialogBox dialogBox;
     GameObject player;
+
     // Use this for initialization
     void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
+        RegsiterVoiceEvent();
+    }
+
+    //添加语音事件
+    private void RegsiterVoiceEvent()
+    {
+        var voiceInputManager = GameObject.FindGameObjectWithTag("VoiceInputManager").GetComponent<VoiceInputManager>();
+        //keywords.Add("hello", () => { dialogManager.HandleInput("hello"); });
+        //keywords.Add("good bye", () => { dialogManager.HandleInput("good bye"); });
+        //keywords.Add("as you wish", () => { dialogManager.HandleInput("as you wish"); });
+        //keywords.Add("go fuck yourself", () => { dialogManager.HandleInput("go fuck yourself"); });
     }
 
     public void HandleInput(string str)

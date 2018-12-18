@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-    public ParticleSystem fireBallParticle;
-    public ParticleSystem lightParticle;
     public FirstPersonCamera view;
 
     [HideInInspector]
@@ -18,7 +16,6 @@ public class PlayerController : MonoBehaviour {
 
     int unableCount = 0;
 
-
     void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody>();
@@ -27,31 +24,31 @@ public class PlayerController : MonoBehaviour {
     }
     // Use this for initialization
     void Start() {
-        fireBallParticle.Stop();
-        lightParticle.Stop();
+        RegsiterVoiceEvent();
+    }
+
+    //添加语音事件
+    private void RegsiterVoiceEvent()
+    {
+        var voiceInputManager = GameObject.FindGameObjectWithTag("VoiceInputManager").GetComponent<VoiceInputManager>();
+        voiceInputManager.AddEvent("fire ball", () => { UseMagic(1); });
+        voiceInputManager.AddEvent("The sky set you aflame", () => { UseMagic(1); });
+        voiceInputManager.AddEvent("Sun strike", () => { UseMagic(2); });
+        voiceInputManager.AddEvent("follow my will", () => { UseMagic(4); });
+        voiceInputManager.AddEvent("leave for my will", () => { UseMagic(5); });
     }
 
     public void UseMagic(int index)
     {
-        StopMagic();
         switch (index)
         {
             case 1:
-                animator.Play("UseStick");
-                fireBallParticle.Play();
+                animator.SetTrigger("FireBall");
                 break;
             case 2:
-                animator.Play("UseStick");
-                lightParticle.Play();
+                animator.SetTrigger("LightBeam");
                 break;
         }
-        Invoke("StopMagic", 1.0f);
-    }
-
-    public void StopMagic()
-    {
-        fireBallParticle.Stop();
-        lightParticle.Stop();
     }
 
     // Update is called once per frame
@@ -118,7 +115,6 @@ public class PlayerController : MonoBehaviour {
         if (grounded == true)
         {
             playerRigidbody.velocity += new Vector3(0, player.JumpForce * 1.5f, 0);    //添加加速度
-                                                                                //playerRigidbody.AddForce(Vector3.up * JumpForce);          //给刚体一个向上的力，力的大小为Vector3.up*mJumpSpeed
             grounded = false;
         }
     }
@@ -154,7 +150,5 @@ public class PlayerController : MonoBehaviour {
                 view.enabled = false;
             }
         }
-
     }
-
 }
